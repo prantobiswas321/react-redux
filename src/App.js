@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 import ProductListing from './components/ProductListing';
 import ProductDetail from './components/ProductDetail';
-import ProductSingle from './components/ProductSingle';
+import Home from './components/Home';
+// import ProductSingle from './components/ProductSingle';
 
 function App() {
   return (
@@ -15,8 +16,10 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/" exact component={ProductListing} />
-          <Route path="/product/:productId" exact component={ProductDetail} />
+          <Route path="/" exact component={Home} />
+          <Route path="/Home" component={Home} />
+          <Route path="/explore" component={ProductListing} />
+          <Route path="/product/:productId" component={ProductDetail} />
           <Route>404 Not Found!</Route>
         </Switch>
       </Router>

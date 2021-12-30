@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import axios from "axios";
+import { useDispatch, useSelector } from 'react-redux';
 import { setProducts } from '../redux/actions/productActions';
-import { useSelector } from 'react-redux';
-import ProductSingle from './ProductSingle';
-import { useDispatch } from 'react-redux';
+import FourServices from './FourServices';
 
-const ProductListing = () => {
+const Home = () => {
     const products = useSelector((state) => state);
     const dispatch = useDispatch();
 
@@ -21,9 +20,9 @@ const ProductListing = () => {
     console.log("Products: ", products);
     return (
         <div className="container my-5">
-            <ProductSingle />
+            <FourServices></FourServices>
         </div>
     );
 };
 
-export default ProductListing;
+export default Home;
