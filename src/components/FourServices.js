@@ -4,10 +4,10 @@ import ShowFourPoduct from './ShowFourPoduct';
 
 const FourServices = () => {
     const products = useSelector((state) => state.allProducts.products);
-    console.log(products);
+    console.log('productsIn4',products);
     const size = 4;
     const result = products.slice(0, size);
-    console.log(result);
+    console.log('resultIn4',result);
     return (
         <div>
             {
